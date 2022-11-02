@@ -1,0 +1,450 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500;1,800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #282D2D;
+}
+
+/* HEADER */
+.pai {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  width: auto;
+}
+
+.coluna2 {
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Rancho';
+  font-weight: normal;
+  text-shadow: 2px 2px 0px rgb(0 0 0);
+  font-size: 3em;
+  text-align: center;
+  margin-top: -10px;
+  margin-left: 50px;
+}
+
+.coluna3 {
+  padding-right: 70px;
+}
+
+header>p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  color: white;
+  max-width: 600px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: auto;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 315);
+
+}
+
+nav {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+nav>a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+
+.criarconta {
+  height: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  background-color: white;
+  color: #282D2D;
+  border: 2px solid white;
+  /* Green */
+  border-radius: 6px;
+}
+
+.entrar {
+  height: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  background-color: #282D2D;
+  ;
+  color: white;
+  border: 2px solid white;
+  /* Green */
+  border-radius: 6px;
+  margin-left: 15px;
+}
+
+/*filmes carrosel */
+
+.filmes-carrousel {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.imagem-filmes {
+  width: 150px;
+  margin-right: 40px;
+  margin-left: 40px;
+  box-sizing: border-box;
+}
+
+.carouselOfImages {
+  background-image: linear-gradient(to bottom, #222424, #282D2D, #222424);
+  overflow: visible;
+}
+
+.carouselImage {
+  width: 250px;
+  height: 250px;
+  margin-top: 65px;
+  margin-bottom: 100px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+  transition: transform 0.5s;
+  transform: scale(1);
+}
+
+.carouselImage img {
+  height: 300px;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.carouselImage.is-selected {
+  z-index: 10;
+  transform: scale(1.5);
+}
+
+.carouselImage.nextToSelected {
+  transform: scale(1.25);
+  z-index: 5;
+}
+
+/*! Flickity v2.0.5
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  background: hsla(0, 0%, 100%, 0.75);
+  cursor: pointer;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.flickity-prev-next-button:hover {
+  background: white;
+}
+
+.flickity-prev-next-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #09F;
+}
+
+.flickity-prev-next-button:active {
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #333;
+}
+
+.flickity-page-dots {
+
+  width: 100%;
+  bottom: -25px;
+  margin: 0;
+  padding-bottom: 10px;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots {
+  direction: rtl;
+}
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+  background: #D84444;
+}
+
+
+footer {
+  background-color: rgb(173, 158, 158);
+  color: white;
+  text-align: center;
+  font-size: 0.8;
+  padding: 5px;
+}
+
+footer>p>a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+footer a:hover {
+  text-decoration: underline;
+
+}
+
+.footer {
+  padding-top: 50px;
+  padding-right: 900px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* LOGIN */
+
+
+h1.login {
+  color: white;
+  font-family: 'Rancho';
+  font-size: 40px;
+  font-weight: normal;
+  text-shadow: 2px 2px 0px rgb(0 0 0);
+  margin-top: 2%;
+  font-size: 4em;
+  text-align: center;
+}
+
+.teladelogin {
+  width: 27%;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2%;
+  padding: 1%;
+}
+
+.input {
+  border: 1px solid #a9b1b1;
+  border-radius: 4px;
+  width: 80%;
+  padding: 3%;
+  margin-bottom: 2%;
+}
+
+.btnEntrar {
+  border-radius: 4px;
+  border: 1px solid #a9b1b1;
+  margin-left: 33%;
+  padding: 4%;
+  width: 40%;
+  align-items: center;
+}
+
+.btnEntrar:hover {
+  cursor: pointer;
+}
+
+.titleform h2 {
+  text-align: center;
+  justify-content: center;
+  color: #282D2D;
+  text-align: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 23px;
+}
+
+.titleform {
+  padding: 0% 7%;
+}
+
+.title-btn {
+  font-size: 16px;
+}
+
+.ico-btn {
+  margin-right: 10%;
+}
+
+h3 {
+  text-align: center;
+  color: #757575;
+
+}
+
+hr {
+  width: 90%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.cadastrado {
+  bottom: 100px;
+}
+
+/*--------------------------------------------------*/
+
+/*TELA FILMES*/
+
+#fundofilme {
+  height: 400px;
+  width:100%;
+  display: block;
+  position: absolute;
+  background: linear-gradient(0deg, rgb(40,45,45) 15%, rgba(0, 0, 0, 0.123) 80%), url("https://image.tmdb.org/t/p/original/p3JX4YPcJOCPp8MSjL6mg7ZhHgA.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 4%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.poster1 {
+  width: 230px;
+  border-radius: 5px;
+  border: solid 1px white;
+}
+
+.posterfilme {
+  display: inline-block;
+}
+.detalhes{
+  display: inline-block;
+  width: 50%;
+  vertical-align:top;
+}
+.titulofilme{
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align:top;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 40px;
+  text-shadow: 1px 1px 10px#161616;
+}
+.titulooriginal{
+  margin-left: 2%;
+  margin-top: 1%;
+  vertical-align:top;
+  color: rgb(211, 211, 211);
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px#161616;
+}
